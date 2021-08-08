@@ -1,5 +1,6 @@
-import React from 'react';
-import { Label, Input } from './Filter.style';
+import React from 'react'
+import { Label, Input } from './Filter.style'
+import PropTypes from 'prop-types'
 
 function Filter({ inputSearch, onChange }) {
   return (
@@ -17,7 +18,12 @@ function Filter({ inputSearch, onChange }) {
         />
       </Label>
     </form>
-  );
+  )
 }
 
-export default Filter;
+export default Filter
+
+Filter.propTypes = {
+  inputSearch: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+}

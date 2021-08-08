@@ -1,5 +1,6 @@
 import React from 'react'
 import { Wrapper, Title, Item, Contact, Button } from './Contacts.style'
+import PropTypes from 'prop-types'
 
 function Contacts({ contacts = [], children, onClick }) {
   return (
@@ -29,3 +30,8 @@ function Contacts({ contacts = [], children, onClick }) {
 }
 
 export default Contacts
+
+Contacts.propTypes = {
+  contacts: PropTypes.array.isRequired,
+  onClick: PropTypes.func.isRequired,
+}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Button, Wrapper, Label, Input } from './Form.style'
+import PropTypes from 'prop-types'
 
 export default function Form({ onSubmit }) {
   const [name, setName] = useState('')
@@ -66,4 +67,8 @@ export default function Form({ onSubmit }) {
       </form>
     </Wrapper>
   )
+}
+
+Form.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
 }
